@@ -14,13 +14,15 @@ function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: "easeOut" }}
         >
-          <p className="hero-eyebrow">Advanced facial aesthetics</p>
+         <p className="hero-eyebrow">Advanced facial aesthetics</p>
 
-          <h1 className="hero-title">
-            Refine. Define.
-            <br />
-            <em>Enhance.</em>
-          </h1>
+
+
+<h1 className="hero-title">
+  Refine. Define.
+  <br />
+  <em>Enhance.</em>
+</h1>
 
           <p className="hero-description">
             Expert-led aesthetic treatments designed to sculpt, rejuvenate and
@@ -75,11 +77,11 @@ function Hero() {
 </div>
 
           <div className="hero-badge">
-            <span className="hero-badge-icon">Em</span>
+            <span className="hero-badge-icon">E</span>
 
             <span className="hero-badge-text">
               <span>Independent prescriber</span>
-              <span>Every plan, clinically led</span>
+              <span>Satisfying your skin's quest</span>
             </span>
           </div>
         </motion.div>

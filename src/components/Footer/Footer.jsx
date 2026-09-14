@@ -14,11 +14,8 @@ function Footer() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <div className="footer-logo">EMSTETIQUES</div>
-
-          <div className="footer-tagline">
-            Pharmacist Prescriber Aesthetics
-          </div>
+          <img 
+          src="https://res.cloudinary.com/zy7u4nqi/image/upload/v1789407932/emstetiques-wordmark-tagline-light_upettj.png" alt="logo" />
 
           <p className="footer-description">
             Prescriber-led facial aesthetics with a focus on natural, balanced

@@ -15,6 +15,7 @@ function Header() {
         <a href="#top" className="em-logo">
           <img
             src={headerLogo}
+            // src="https://res.cloudinary.com/zy7u4nqi/image/upload/v1789407932/tagline_qzl1ob.png"
             alt="Emstetiques"
           />
         </a>
