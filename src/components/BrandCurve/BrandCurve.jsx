@@ -10,27 +10,37 @@ function BrandCurve({ className = "" }) {
         role="presentation"
       >
         <defs>
-          {/* Cuts the main lash without changing its curve */}
           <clipPath id="brand-curve-main-clip">
             <rect
               x="0"
               y="0"
-              width="274"
+              width="267"
               height="75"
             />
           </clipPath>
         </defs>
 
-        {/* Main lash sweep */}
+        {/* Main curve */}
         <motion.path
           className="brand-curve-main"
-          d="M8 10
-             C58 27 112 38 170 39
-             C221 40 263 31 298 1"
+          d="
+            M8 10
+            C58 27 112 38 170 39
+            C208 40 240 35 267 21
+          "
           clipPath="url(#brand-curve-main-clip)"
-          initial={{ pathLength: 0, opacity: 0 }}
-          whileInView={{ pathLength: 1, opacity: 1 }}
-          viewport={{ once: true, amount: 0.8 }}
+          initial={{
+            pathLength: 0,
+            opacity: 0,
+          }}
+          whileInView={{
+            pathLength: 1,
+            opacity: 1,
+          }}
+          viewport={{
+            once: true,
+            amount: 0.8,
+          }}
           transition={{
             pathLength: {
               duration: 1.4,
@@ -44,12 +54,23 @@ function BrandCurve({ className = "" }) {
 
         {/* First lash */}
         <motion.path
-          className="brand-curve-lash"
-          d="M238 29
-             C248 36 257 46 260 58"
-          initial={{ pathLength: 0, opacity: 0 }}
-          whileInView={{ pathLength: 1, opacity: 1 }}
-          viewport={{ once: true, amount: 0.8 }}
+          className="brand-curve-lash brand-curve-lash-1"
+          d="
+            M238 29
+            C248 36 257 46 260 58
+          "
+          initial={{
+            pathLength: 0,
+            opacity: 0,
+          }}
+          whileInView={{
+            pathLength: 1,
+            opacity: 1,
+          }}
+          viewport={{
+            once: true,
+            amount: 0.8,
+          }}
           transition={{
             pathLength: {
               duration: 0.55,
@@ -65,12 +86,23 @@ function BrandCurve({ className = "" }) {
 
         {/* Second lash */}
         <motion.path
-          className="brand-curve-lash"
-          d="M257 24
-             C269 31 280 42 286 52"
-          initial={{ pathLength: 0, opacity: 0 }}
-          whileInView={{ pathLength: 1, opacity: 1 }}
-          viewport={{ once: true, amount: 0.8 }}
+          className="brand-curve-lash brand-curve-lash-2"
+          d="
+            M257 24
+            C269 31 280 42 286 52
+          "
+          initial={{
+            pathLength: 0,
+            opacity: 0,
+          }}
+          whileInView={{
+            pathLength: 1,
+            opacity: 1,
+          }}
+          viewport={{
+            once: true,
+            amount: 0.8,
+          }}
           transition={{
             pathLength: {
               duration: 0.55,
@@ -86,12 +118,23 @@ function BrandCurve({ className = "" }) {
 
         {/* Third lash */}
         <motion.path
-          className="brand-curve-lash"
-          d="M280 16
-             C293 21 304 28 312 37"
-          initial={{ pathLength: 0, opacity: 0 }}
-          whileInView={{ pathLength: 1, opacity: 1 }}
-          viewport={{ once: true, amount: 0.8 }}
+          className="brand-curve-lash brand-curve-lash-3"
+          d="
+            M280 16
+            C293 21 304 28 312 37
+          "
+          initial={{
+            pathLength: 0,
+            opacity: 0,
+          }}
+          whileInView={{
+            pathLength: 1,
+            opacity: 1,
+          }}
+          viewport={{
+            once: true,
+            amount: 0.8,
+          }}
           transition={{
             pathLength: {
               duration: 0.5,
