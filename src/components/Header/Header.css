@@ -2,28 +2,24 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-
+  width: 100%;
   background: rgba(252, 243, 244, 0.88);
-
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-
   border-bottom: 1px solid rgba(168, 18, 63, 0.12);
 }
 
 .em-header-inner {
   position: relative;
-
+  width: 100%;
   max-width: 1240px;
   min-height: 70px;
-
   margin: 0 auto;
   padding: 6px 28px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   gap: 20px;
 }
 
@@ -34,16 +30,15 @@
 
 .em-logo {
   display: block;
-
   flex: none;
-
   line-height: 0;
+  position: relative;
+  z-index: 30;
 }
 
 .em-logo img {
   width: 205px;
   height: auto;
-
   display: block;
 }
 
@@ -54,7 +49,6 @@
 
 .em-navigation-area {
   position: absolute;
-
   left: 50%;
   top: 50%;
 
@@ -77,7 +71,6 @@
 
 .em-e-trigger {
   position: absolute;
-
   top: 50%;
   left: 50%;
 
@@ -92,7 +85,6 @@
 
   border: 0;
   border-radius: 50%;
-
   background: transparent;
 
   cursor: pointer;
@@ -111,7 +103,6 @@
   display: block;
 
   object-fit: cover;
-
   border-radius: 50%;
 
   box-shadow:
@@ -133,11 +124,9 @@
   content: "";
 
   position: absolute;
-
   inset: -7px;
 
   border-radius: 50%;
-
   border: 2px solid rgba(168, 18, 63, 0.65);
 
   animation: emLogoPulse 2.2s ease-out infinite;
@@ -193,30 +182,24 @@
 @keyframes emLogoPulse {
   0% {
     opacity: 0.8;
-
     transform: scale(0.95);
   }
 
   60% {
     opacity: 0.25;
-
     transform: scale(1.18);
   }
 
   100% {
     opacity: 0;
-
     transform: scale(1.32);
   }
 }
 
+
 /* ========================================
    WHEN MENU OPENS
 ======================================== */
-
-/*
-   E fades away and slightly shrinks.
-*/
 
 .menu-open .em-e-trigger {
   opacity: 0;
@@ -252,9 +235,7 @@
     scale(0.94);
 
   opacity: 0;
-
   visibility: hidden;
-
   pointer-events: none;
 
   transition:
@@ -263,17 +244,9 @@
     visibility 0.3s ease;
 }
 
-
-/*
-   Navigation appears exactly in
-   the center of the header.
-*/
-
 .em-nav-visible {
   opacity: 1;
-
   visibility: visible;
-
   pointer-events: auto;
 
   transform:
@@ -292,7 +265,6 @@
   letter-spacing: 0.11em;
 
   text-transform: uppercase;
-
   white-space: nowrap;
 
   transition:
@@ -301,6 +273,15 @@
 }
 
 .em-nav a:hover {
+  color: #a8123f;
+}
+
+
+/* ========================================
+   ACTIVE NAV LINK
+======================================== */
+
+.em-nav a.active {
   color: #a8123f;
 }
 
@@ -348,28 +329,15 @@
 
 
 /* ========================================
-   E PULSE
-======================================== */
-
-@keyframes emLogoPulse {
-  0%,
-  100% {
-    opacity: 0.25;
-    transform: scale(1);
-  }
-
-  50% {
-    opacity: 0;
-    transform: scale(1.12);
-  }
-}
-
-
-/* ========================================
    TABLET
 ======================================== */
 
 @media (max-width: 1000px) {
+  .em-header-inner {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
   .em-logo img {
     width: 175px;
   }
@@ -387,6 +355,16 @@
     width: 42px;
     height: 42px;
   }
+
+  .em-navigation-area {
+    width: 42px;
+    height: 42px;
+  }
+
+  .em-nav-book {
+    padding: 11px 18px;
+    font-size: 10px;
+  }
 }
 
 
@@ -395,15 +373,22 @@
 ======================================== */
 
 @media (max-width: 700px) {
-  .em-header-inner {
-    min-height: 68px;
 
-    padding: 10px 20px;
+  .em-header-inner {
+    min-height: 64px;
+    padding: 9px 16px;
+    gap: 10px;
   }
+
+
+  /* Logo */
 
   .em-logo img {
-    width: 145px;
+    width: 140px;
   }
+
+
+  /* Center E */
 
   .em-navigation-area {
     width: 40px;
@@ -415,27 +400,25 @@
     height: 40px;
   }
 
-  /*
-     On mobile, navigation becomes
-     a dropdown underneath the header.
-  */
+
+  /* Mobile Navigation */
 
   .em-nav {
     position: absolute;
 
-    top: calc(100% + 18px);
+    top: calc(100% + 12px);
     left: 50%;
 
-    width: max-content;
-    max-width: calc(100vw - 30px);
+    width: min(240px, calc(100vw - 32px));
+    max-width: calc(100vw - 32px);
 
-    padding: 18px 22px;
+    padding: 18px 20px;
 
     flex-direction: column;
 
-    gap: 15px;
+    gap: 14px;
 
-    background: rgba(252, 243, 244, 0.97);
+    background: rgba(252, 243, 244, 0.98);
 
     border: 1px solid rgba(168, 18, 63, 0.12);
 
@@ -458,26 +441,89 @@
   }
 
   .em-nav a {
+    width: 100%;
+
+    padding: 5px 0;
+
+    text-align: center;
+
     font-size: 10px;
+
     letter-spacing: 0.1em;
   }
 
-  .em-nav-book {
-    padding: 9px 15px;
 
-    font-size: 10px;
+  /* Book Now */
+
+  .em-nav-book {
+    padding: 9px 13px;
+
+    font-size: 9px;
+
+    letter-spacing: 0.12em;
+
+    white-space: nowrap;
   }
 }
 
 
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
 @media (max-width: 480px) {
+
+  .em-header-inner {
+    min-height: 60px;
+    padding: 8px 12px;
+  }
+
   .em-logo img {
-    width: 125px;
+    width: 118px;
+  }
+
+  .em-navigation-area {
+    width: 36px;
+    height: 36px;
+  }
+
+  .em-e-trigger {
+    width: 36px;
+    height: 36px;
+  }
+
+  .em-e-trigger::after {
+    inset: -5px;
   }
 
   .em-nav-book {
-    padding: 8px 12px;
+    padding: 8px 10px;
 
-    font-size: 9px;
+    font-size: 8px;
+
+    letter-spacing: 0.1em;
+  }
+}
+
+
+/* ========================================
+   VERY SMALL PHONES
+======================================== */
+
+@media (max-width: 360px) {
+
+  .em-header-inner {
+    padding-left: 10px;
+    padding-right: 10px;
+    gap: 6px;
+  }
+
+  .em-logo img {
+    width: 105px;
+  }
+
+  .em-nav-book {
+    padding: 7px 8px;
+    font-size: 7.5px;
   }
 }

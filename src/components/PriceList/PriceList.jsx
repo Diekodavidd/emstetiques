@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 
 import BrandCurve from "../BrandCurve/BrandCurve";
 import PriceItem from "./PriceItem";
+import { Link, NavLink } from "react-router-dom";
 
 import prices from "../../data/prices";
 
@@ -46,6 +47,12 @@ function PriceList() {
               price={price}
             />
           ))}
+
+          <NavLink to="/pricelist"
+            className="price-price-link"
+          >
+            See full Price list
+          </NavLink>
         </motion.div>
 
         <p className="price-list-note">

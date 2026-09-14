@@ -30,7 +30,7 @@ function Hero() {
           </p>
 
           <div className="hero-actions">
-           <NavLink to="/book-us" className="hero-primary">
+           <NavLink to="/contact" className="hero-primary">
               Book your consultation
             </NavLink>
 

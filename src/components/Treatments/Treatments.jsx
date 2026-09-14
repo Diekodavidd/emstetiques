@@ -33,7 +33,7 @@ function Treatments() {
           <NavLink to="/treatments"
             className="treatments-price-link"
           >
-            See full price list
+            See full Treatment list
           </NavLink>
         </motion.div>
 

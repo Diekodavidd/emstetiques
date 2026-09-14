@@ -1,4 +1,3 @@
-
 .hero {
   position: relative;
   padding: 0;
@@ -12,13 +11,15 @@
 }
 
 .hero-container {
+  width: 100%;
   max-width: 1240px;
   margin: 0 auto;
   padding: 84px 28px 92px;
 
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr);
   gap: 56px;
+
   align-items: center;
 }
 
@@ -34,8 +35,8 @@
   font-weight: 400;
   letter-spacing: 0.36em;
   line-height: 1.4;
-  text-transform: uppercase;
 
+  text-transform: uppercase;
   color: #a8123f;
 }
 
@@ -44,6 +45,7 @@
 
   font-family: var(--em-font-heading);
   font-weight: 300;
+
   font-size: clamp(44px, 6.4vw, 86px);
   line-height: 0.98;
   letter-spacing: -0.015em;
@@ -74,6 +76,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
+
   margin-top: 38px;
 }
 
@@ -84,6 +87,7 @@
   justify-content: center;
 
   padding: 17px 34px;
+
   border-radius: 999px;
 
   font-family: var(--em-font-body);
@@ -91,6 +95,7 @@
   font-weight: 400;
   letter-spacing: 0.2em;
   line-height: 1.2;
+
   text-transform: uppercase;
 
   transition:
@@ -104,7 +109,8 @@
   background: #a8123f;
   color: #fcf3f4;
 
-  box-shadow: 0 12px 30px rgba(168, 18, 63, 0.28);
+  box-shadow:
+    0 12px 30px rgba(168, 18, 63, 0.28);
 }
 
 .hero-primary:hover {
@@ -151,15 +157,19 @@
   font-weight: 400;
   letter-spacing: 0.18em;
   line-height: 1.4;
-  text-transform: uppercase;
 
+  text-transform: uppercase;
   color: #7a4b54;
 }
 
-/* Hero visual */
+
+/* ========================================
+   HERO VISUAL
+======================================== */
 
 .hero-visual {
   position: relative;
+  min-width: 0;
 }
 
 .hero-visual-border {
@@ -169,18 +179,21 @@
 
   border: 1px solid rgba(168, 18, 63, 0.28);
   border-radius: 260px 260px 20px 20px;
+
+  pointer-events: none;
 }
 
 .hero-portrait {
   position: relative;
 
+  width: 100%;
   aspect-ratio: 4 / 5;
+
+  overflow: hidden;
 
   display: flex;
   align-items: flex-end;
   justify-content: center;
-
-  overflow: hidden;
 
   border-radius: 250px 250px 16px 16px;
 
@@ -190,25 +203,22 @@
     #efb6bf 14px 28px
   );
 
-  box-shadow: 0 30px 70px rgba(92, 16, 39, 0.22);
-}
-.hero-portrait {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  min-height: 560px;
-  overflow: hidden;
-  /* border-radius: 4px; */
+  box-shadow:
+    0 30px 70px rgba(92, 16, 39, 0.22);
 }
 
 .hero-portrait img {
-  /* width: 100%; */
+  width: 100%;
   height: 100%;
-    border-radius: 250px 250px 16px 16px;
+
   display: block;
+
   object-fit: cover;
   object-position: center;
+
+  border-radius: 250px 250px 16px 16px;
 }
+
 .hero-portrait-label {
   margin-bottom: 26px;
 
@@ -223,13 +233,17 @@
   font-weight: 400;
   letter-spacing: 0.24em;
   line-height: 1.3;
+
   text-align: center;
   text-transform: uppercase;
 
   color: #8e1035;
 }
 
-/* Floating badge */
+
+/* ========================================
+   FLOATING BADGE
+======================================== */
 
 .hero-badge {
   position: absolute;
@@ -239,6 +253,7 @@
 
   display: flex;
   align-items: center;
+
   gap: 12px;
 
   padding: 16px 20px;
@@ -247,7 +262,8 @@
 
   background: #fcf3f4;
 
-  box-shadow: 0 18px 40px rgba(92, 16, 39, 0.18);
+  box-shadow:
+    0 18px 40px rgba(92, 16, 39, 0.18);
 }
 
 .hero-badge-icon {
@@ -297,51 +313,47 @@
   font-size: 11px;
   font-weight: 400;
   letter-spacing: 0.12em;
+
   text-transform: uppercase;
 
   color: #a8123f;
 }
 
-/* Responsive */
 
-@media (max-width: 768px) {
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 900px) {
   .hero-container {
-    padding: 64px 24px 76px;
-    gap: 48px;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.8fr);
+
+    gap: 36px;
+
+    padding: 70px 24px 78px;
   }
 
   .hero-title {
-    font-size: clamp(44px, 12vw, 68px);
+    font-size: clamp(48px, 7vw, 68px);
   }
 
   .hero-description {
     font-size: 16px;
   }
 
-  .hero-badge {
-    left: 10px;
-    bottom: 30px;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-container {
-    grid-template-columns: 1fr;
-    padding: 54px 20px 68px;
-  }
-
   .hero-actions {
-    flex-direction: column;
-    align-items: stretch;
+    margin-top: 32px;
   }
 
   .hero-primary,
   .hero-secondary {
-    width: 100%;
+    padding: 15px 25px;
+    font-size: 11px;
   }
 
   .hero-stats {
     gap: 24px;
+    margin-top: 42px;
   }
 
   .hero-stat-value {
@@ -353,11 +365,254 @@
   }
 
   .hero-badge {
-    position: relative;
-    left: auto;
-    bottom: auto;
-    width: fit-content;
-    margin-top: -50px;
-    margin-left: 10px;
+    left: -12px;
+    bottom: 30px;
+  }
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 767.98px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+
+    gap: 52px;
+
+    padding: 56px 20px 70px;
+  }
+
+  .hero-content {
+    width: 100%;
+  }
+
+  .hero-eyebrow {
+    margin-bottom: 20px;
+
+    font-size: 10px;
+    letter-spacing: 0.27em;
+  }
+
+  .hero-title {
+    font-size: clamp(48px, 14vw, 68px);
+    line-height: 0.96;
+  }
+
+  .hero-description {
+    max-width: 100%;
+
+    margin-top: 24px;
+
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .hero-actions {
+    width: 100%;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    margin-top: 30px;
+  }
+
+  .hero-primary,
+  .hero-secondary {
+    width: 100%;
+    min-height: 52px;
+
+    padding: 15px 20px;
+
+    font-size: 10px;
+    letter-spacing: 0.16em;
+  }
+
+  .hero-stats {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 12px;
+
+    margin-top: 42px;
+    padding-top: 24px;
+  }
+
+  .hero-stat {
+    min-width: 0;
+  }
+
+  .hero-stat-value {
+    font-size: clamp(25px, 8vw, 34px);
+  }
+
+  .hero-stat-label {
+    margin-top: 7px;
+
+    font-size: 8px;
+    letter-spacing: 0.1em;
+
+    line-height: 1.45;
+  }
+
+
+  /* Hero image */
+
+  .hero-visual {
+    width: 100%;
+
+    padding: 0 8px;
+  }
+
+  .hero-visual-border {
+    inset: -4% -2% 7% 3%;
+
+    border-radius: 180px 180px 16px 16px;
+  }
+
+  .hero-portrait {
+    width: 100%;
+
+    aspect-ratio: 4 / 5;
+
+    min-height: 0;
+
+    border-radius: 180px 180px 14px 14px;
+  }
+
+  .hero-portrait img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 180px 180px 14px 14px;
+  }
+
+
+  /* Badge */
+
+  .hero-badge {
+    left: -2px;
+    bottom: 24px;
+
+    max-width: calc(100% - 20px);
+
+    padding: 12px 14px;
+
+    gap: 9px;
+
+    border-radius: 12px;
+  }
+
+  .hero-badge-icon {
+    width: 30px;
+    height: 30px;
+
+    font-size: 15px;
+  }
+
+  .hero-badge-text span:first-child {
+    font-size: 11px;
+  }
+
+  .hero-badge-text span:last-child {
+    font-size: 8px;
+    letter-spacing: 0.09em;
+  }
+}
+
+
+/* ========================================
+   SMALL PHONES
+======================================== */
+
+@media (max-width: 480px) {
+  .hero-container {
+    gap: 46px;
+
+    padding: 48px 16px 60px;
+  }
+
+  .hero-eyebrow {
+    font-size: 9px;
+    letter-spacing: 0.22em;
+  }
+
+  .hero-title {
+    font-size: clamp(44px, 15vw, 60px);
+  }
+
+  .hero-description {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .hero-stats {
+    gap: 8px;
+  }
+
+  .hero-stat-value {
+    font-size: 27px;
+  }
+
+  .hero-stat-label {
+    font-size: 7.5px;
+    letter-spacing: 0.07em;
+  }
+
+  .hero-visual {
+    padding: 0 5px;
+  }
+
+  .hero-portrait {
+    border-radius: 150px 150px 12px 12px;
+  }
+
+  .hero-portrait img {
+    border-radius: 150px 150px 12px 12px;
+  }
+
+  .hero-badge {
+    left: -2px;
+    bottom: 18px;
+
+    padding: 10px 12px;
+  }
+}
+
+
+/* ========================================
+   VERY SMALL PHONES
+======================================== */
+
+@media (max-width: 360px) {
+  .hero-container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .hero-title {
+    font-size: 43px;
+  }
+
+  .hero-stat-value {
+    font-size: 24px;
+  }
+
+  .hero-stat-label {
+    font-size: 7px;
+  }
+
+  .hero-badge-text span:first-child {
+    font-size: 10px;
+  }
+
+  .hero-badge-text span:last-child {
+    font-size: 7px;
   }
 }
