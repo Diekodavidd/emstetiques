@@ -1,0 +1,28 @@
+.home-placeholder {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+  background: var(--em-bg);
+}
+
+.home-placeholder h1 {
+  margin: 0;
+
+  font-family: var(--em-font-heading);
+  font-size: 64px;
+  font-weight: 300;
+  color: var(--em-deep-burgundy);
+}
+
+.home-placeholder p {
+  margin: 12px 0 0;
+
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  color: var(--em-muted);
+}

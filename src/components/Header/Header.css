@@ -1,0 +1,483 @@
+.em-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background: rgba(252, 243, 244, 0.88);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border-bottom: 1px solid rgba(168, 18, 63, 0.12);
+}
+
+.em-header-inner {
+  position: relative;
+
+  max-width: 1240px;
+  min-height: 70px;
+
+  margin: 0 auto;
+  padding: 6px 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+
+/* ========================================
+   FULL LOGO — LEFT
+======================================== */
+
+.em-logo {
+  display: block;
+
+  flex: none;
+
+  line-height: 0;
+}
+
+.em-logo img {
+  width: 205px;
+  height: auto;
+
+  display: block;
+}
+
+
+/* ========================================
+   CENTER NAVIGATION AREA
+======================================== */
+
+.em-navigation-area {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 46px;
+  height: 46px;
+
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 20;
+}
+
+
+/* ========================================
+   E BUTTON
+======================================== */
+
+.em-e-trigger {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 46px;
+  height: 46px;
+
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+  border-radius: 50%;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  transform: translate(-50%, -50%);
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.3s ease;
+}
+
+.em-e-trigger img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 4px 16px rgba(168, 18, 63, 0.22);
+
+  animation: emEGlow 2.2s ease-in-out infinite;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* ========================================
+   VISIBLE PULSE RING
+======================================== */
+
+.em-e-trigger::after {
+  content: "";
+
+  position: absolute;
+
+  inset: -7px;
+
+  border-radius: 50%;
+
+  border: 2px solid rgba(168, 18, 63, 0.65);
+
+  animation: emLogoPulse 2.2s ease-out infinite;
+
+  pointer-events: none;
+}
+
+
+/* ========================================
+   E HOVER
+======================================== */
+
+.em-e-trigger:hover img {
+  animation-play-state: paused;
+
+  transform: scale(1.08);
+
+  box-shadow:
+    0 8px 28px rgba(168, 18, 63, 0.35);
+}
+
+.em-e-trigger:hover::after {
+  animation-play-state: paused;
+
+  opacity: 1;
+
+  border-color: rgba(168, 18, 63, 0.8);
+}
+
+
+/* ========================================
+   E GLOW ANIMATION
+======================================== */
+
+@keyframes emEGlow {
+  0%,
+  100% {
+    box-shadow:
+      0 4px 16px rgba(168, 18, 63, 0.18);
+  }
+
+  50% {
+    box-shadow:
+      0 6px 26px rgba(168, 18, 63, 0.45);
+  }
+}
+
+
+/* ========================================
+   EXPANDING PULSE
+======================================== */
+
+@keyframes emLogoPulse {
+  0% {
+    opacity: 0.8;
+
+    transform: scale(0.95);
+  }
+
+  60% {
+    opacity: 0.25;
+
+    transform: scale(1.18);
+  }
+
+  100% {
+    opacity: 0;
+
+    transform: scale(1.32);
+  }
+}
+
+/* ========================================
+   WHEN MENU OPENS
+======================================== */
+
+/*
+   E fades away and slightly shrinks.
+*/
+
+.menu-open .em-e-trigger {
+  opacity: 0;
+
+  transform:
+    translate(-50%, -50%)
+    scale(0.7);
+
+  pointer-events: none;
+}
+
+
+/* ========================================
+   NAVIGATION
+======================================== */
+
+.em-nav {
+  position: fixed;
+
+  left: 50%;
+  top: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: clamp(16px, 2vw, 30px);
+
+  white-space: nowrap;
+
+  transform:
+    translate(-50%, -50%)
+    scale(0.94);
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  pointer-events: none;
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.35s ease,
+    visibility 0.3s ease;
+}
+
+
+/*
+   Navigation appears exactly in
+   the center of the header.
+*/
+
+.em-nav-visible {
+  opacity: 1;
+
+  visibility: visible;
+
+  pointer-events: auto;
+
+  transform:
+    translate(-50%, -50%)
+    scale(1);
+}
+
+.em-nav a {
+  color: #6b4048;
+
+  font-family: var(--em-font-body);
+
+  font-size: 11px;
+  font-weight: 400;
+
+  letter-spacing: 0.11em;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+
+  transition:
+    color 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.em-nav a:hover {
+  color: #a8123f;
+}
+
+
+/* ========================================
+   BOOK NOW — RIGHT
+======================================== */
+
+.em-nav-book {
+  flex: none;
+
+  padding: 12px 22px;
+
+  border-radius: 999px;
+
+  background: #a8123f;
+
+  color: #fcf3f4 !important;
+
+  font-family: var(--em-font-body);
+
+  font-size: 12px;
+  font-weight: 400;
+
+  letter-spacing: 0.16em;
+
+  text-transform: uppercase;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.em-nav-book:hover {
+  background: #e03a70;
+
+  color: #fcf3f4 !important;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 8px 22px rgba(168, 18, 63, 0.18);
+}
+
+
+/* ========================================
+   E PULSE
+======================================== */
+
+@keyframes emLogoPulse {
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0;
+    transform: scale(1.12);
+  }
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1000px) {
+  .em-logo img {
+    width: 175px;
+  }
+
+  .em-nav {
+    gap: 14px;
+  }
+
+  .em-nav a {
+    font-size: 9px;
+    letter-spacing: 0.08em;
+  }
+
+  .em-e-trigger {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 700px) {
+  .em-header-inner {
+    min-height: 68px;
+
+    padding: 10px 20px;
+  }
+
+  .em-logo img {
+    width: 145px;
+  }
+
+  .em-navigation-area {
+    width: 40px;
+    height: 40px;
+  }
+
+  .em-e-trigger {
+    width: 40px;
+    height: 40px;
+  }
+
+  /*
+     On mobile, navigation becomes
+     a dropdown underneath the header.
+  */
+
+  .em-nav {
+    position: absolute;
+
+    top: calc(100% + 18px);
+    left: 50%;
+
+    width: max-content;
+    max-width: calc(100vw - 30px);
+
+    padding: 18px 22px;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+    background: rgba(252, 243, 244, 0.97);
+
+    border: 1px solid rgba(168, 18, 63, 0.12);
+
+    border-radius: 16px;
+
+    box-shadow:
+      0 18px 40px rgba(92, 16, 39, 0.12);
+
+    transform:
+      translateX(-50%)
+      translateY(-8px)
+      scale(0.96);
+  }
+
+  .em-nav-visible {
+    transform:
+      translateX(-50%)
+      translateY(0)
+      scale(1);
+  }
+
+  .em-nav a {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+  }
+
+  .em-nav-book {
+    padding: 9px 15px;
+
+    font-size: 10px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .em-logo img {
+    width: 125px;
+  }
+
+  .em-nav-book {
+    padding: 8px 12px;
+
+    font-size: 9px;
+  }
+}

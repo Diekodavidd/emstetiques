@@ -1,0 +1,32 @@
+.treatments-page {
+  min-height: 100vh;
+  background: var(--em-bg);
+  color: var(--em-dark);
+  /* overflow-x: hidden; */
+}
+
+.treatments-list {
+  width: 100%;
+}
+
+/*
+  Keeps anchored treatment sections from hiding
+  underneath the sticky header.
+*/
+.treatment-section {
+  scroll-margin-top: 90px;
+}
+
+/* Smooth anchor movement */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Responsive */
+
+@media (max-width: 767.98px) {
+  .treatment-section {
+    scroll-margin-top: 76px;
+  }
+}

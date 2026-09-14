@@ -1,0 +1,288 @@
+.treatment-section {
+  background: var(--em-bg);
+  padding: 96px 28px;
+}
+
+.treatment-section:nth-of-type(even) {
+  background: #f9e7ea;
+}
+
+.treatment-section-container {
+  max-width: var(--em-container);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 60px;
+  align-items: center;
+}
+
+/*
+  Reverse the grid so the content appears on the left
+  and the image appears on the right.
+*/
+.treatment-section-reverse
+  .treatment-image {
+  order: 2;
+}
+
+.treatment-section-reverse
+  .treatment-content {
+  order: 1;
+}
+
+/* Image */
+
+.treatment-image {
+  border-radius: 18px;
+  overflow: hidden;
+
+  aspect-ratio: 3 / 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.treatment-image-light {
+  background: repeating-linear-gradient(
+    135deg,
+    #f7d7db 0 14px,
+    #f1c6cd 14px 28px
+  );
+}
+
+.treatment-image-dark {
+  background: repeating-linear-gradient(
+    135deg,
+    #f3c7ce 0 14px,
+    #eeb9c2 14px 28px
+  );
+}
+
+.treatment-image span {
+  display: inline-block;
+
+  padding: 9px 16px;
+
+  border-radius: 999px;
+
+  background: rgba(252, 243, 244, 0.92);
+
+  font-family: var(--em-font-body);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  line-height: 1.4;
+  text-transform: uppercase;
+
+  color: var(--em-burgundy);
+}
+
+.treatment-image-dark span {
+  color: #8e1035;
+}
+
+/* Content */
+
+.treatment-content {
+  min-width: 0;
+}
+
+.treatment-category {
+  margin: 0 0 14px;
+
+  font-family: var(--em-font-body);
+  font-size: 11.5px;
+  font-weight: 400;
+  letter-spacing: 0.34em;
+  line-height: 1.4;
+  text-transform: uppercase;
+
+  color: var(--em-soft);
+}
+
+.treatment-title {
+  margin: 0;
+
+  font-family: var(--em-font-heading);
+  font-size: clamp(30px, 3.4vw, 46px);
+  font-weight: 300;
+  line-height: 1.1;
+
+  color: var(--em-deep-burgundy);
+}
+
+.treatment-title em {
+  font-style: italic;
+  color: var(--em-burgundy);
+}
+
+.treatment-description {
+  max-width: 560px;
+  margin: 18px 0 0;
+
+  font-family: var(--em-font-body);
+  font-size: 16.5px;
+  font-weight: 300;
+  line-height: 1.8;
+
+  color: var(--em-text);
+}
+
+/* Treatment points */
+
+.treatment-points {
+  display: grid;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.treatment-point {
+  display: flex;
+  gap: 14px;
+
+  font-family: var(--em-font-body);
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.65;
+
+  color: var(--em-text);
+}
+
+.treatment-point-dot {
+  flex: none;
+
+  width: 7px;
+  height: 7px;
+
+  margin-top: 8px;
+
+  border-radius: 50%;
+  background: #e3a2ab;
+}
+
+.treatment-section-reverse
+  .treatment-point-dot {
+  background: #c4707f;
+}
+
+.treatment-point strong {
+  font-weight: 500;
+  color: var(--em-deep-burgundy);
+}
+
+.treatment-point-text {
+  color: var(--em-muted);
+}
+
+/* Booking button */
+
+.treatment-book-button {
+  display: inline-block;
+
+  margin-top: 30px;
+  padding: 15px 28px;
+
+  border-radius: 999px;
+
+  background: var(--em-burgundy);
+  color: var(--em-bg);
+
+  font-family: var(--em-font-body);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  line-height: 1.4;
+  text-transform: uppercase;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.treatment-book-button:hover {
+  background: var(--em-deep-burgundy);
+  color: var(--em-bg);
+  transform: translateY(-2px);
+}
+.treatment-content .brand-curve {
+  margin-top: 6px;
+  margin-bottom: 2px;
+}
+/* Responsive */
+
+@media (max-width: 767.98px) {
+  .treatment-section {
+    padding: 80px 24px;
+  }
+
+  .treatment-section-container {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+
+  /*
+    On mobile the original alternating desktop arrangement
+    is no longer needed. Keep image above content for every section.
+  */
+  .treatment-section-reverse .treatment-image {
+    order: 1;
+  }
+
+  .treatment-section-reverse .treatment-content {
+    order: 2;
+  }
+
+  .treatment-description {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .treatment-section {
+    padding: 70px 20px;
+  }
+
+  .treatment-section-container {
+    gap: 34px;
+  }
+
+  .treatment-image {
+    border-radius: 16px;
+  }
+
+  .treatment-image span {
+    max-width: calc(100% - 32px);
+
+    font-size: 10px;
+    letter-spacing: 0.16em;
+  }
+
+  .treatment-category {
+    font-size: 10.5px;
+    letter-spacing: 0.28em;
+  }
+
+  .treatment-title {
+    font-size: clamp(30px, 9vw, 40px);
+  }
+
+  .treatment-description {
+    font-size: 15.5px;
+    line-height: 1.75;
+  }
+
+  .treatment-point {
+    font-size: 14.5px;
+  }
+
+  .treatment-book-button {
+    padding: 14px 22px;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+  }
+}

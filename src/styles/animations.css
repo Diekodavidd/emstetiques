@@ -1,0 +1,33 @@
+@keyframes emRise {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes emMarquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.em-rise {
+  animation: emRise 0.9s ease both;
+}
+
+.em-rise-slow {
+  animation: emRise 1.1s ease both;
+}
+
+.em-marquee {
+  animation: emMarquee 34s linear infinite;
+}

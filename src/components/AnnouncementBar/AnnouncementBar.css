@@ -1,0 +1,39 @@
+.announcement-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 9px 20px;
+
+  background: var(--em-burgundy);
+  color: var(--em-bg);
+
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.announcement-dot {
+  width: 5px;
+  height: 5px;
+
+  flex: none;
+
+  border-radius: 50%;
+  background: var(--em-pink);
+}
+
+.announcement-text {
+  display: block;
+}
+
+@media (max-width: 576px) {
+  .announcement-bar {
+    padding: 9px 15px;
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    text-align: center;
+  }
+}

@@ -1,0 +1,78 @@
+.contact-methods {
+  display: grid;
+  gap: 14px;
+}
+
+.contact-method-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  width: 100%;
+  padding: 22px 24px;
+  background: var(--em-white);
+  border: 1px solid var(--em-border);
+  border-radius: 16px;
+  color: var(--em-dark);
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.contact-method-card:hover {
+  border-color: var(--em-burgundy);
+  color: var(--em-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(92, 16, 39, 0.07);
+}
+
+.contact-method-content {
+  display: block;
+  min-width: 0;
+}
+
+.contact-method-title {
+  display: block;
+  font-family: var(--em-font-heading);
+  font-size: 24px;
+  line-height: 1.15;
+  font-weight: 400;
+  color: var(--em-deep-burgundy);
+}
+
+.contact-method-description {
+  display: block;
+  margin-top: 4px;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 300;
+  color: var(--em-muted);
+}
+
+.contact-method-icon {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  color: var(--em-burgundy);
+  stroke-width: 1.6;
+  transition: transform 0.3s ease;
+}
+
+.contact-method-card:hover .contact-method-icon {
+  transform: translate(2px, -2px);
+}
+
+@media (max-width: 767.98px) {
+  .contact-method-card {
+    padding: 20px;
+  }
+
+  .contact-method-title {
+    font-size: 23px;
+  }
+
+  .contact-method-description {
+    font-size: 13.5px;
+  }
+}

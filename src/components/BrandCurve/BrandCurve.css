@@ -1,0 +1,53 @@
+.brand-curve {
+  width: 180px;
+  height: 48px;
+  margin: 8px 0 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  overflow: visible;
+}
+
+.brand-curve svg {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  overflow: visible;
+}
+
+.brand-curve-main,
+.brand-curve-lash {
+  fill: none;
+
+  stroke: var(--em-burgundy);
+
+  stroke-width: 2.2;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.brand-curve-main {
+  opacity: 0.95;
+}
+
+.brand-curve-lash {
+  opacity: 0.95;
+}
+
+@media (max-width: 767.98px) {
+  .brand-curve {
+    width: 145px;
+    height: 40px;
+    margin-top: 7px;
+  }
+
+  .brand-curve-main,
+  .brand-curve-lash {
+    stroke-width: 2;
+  }
+}

@@ -1,0 +1,168 @@
+.appointment-form-card {
+  width: 100%;
+  background: var(--em-white);
+  border: 1px solid var(--em-border);
+  border-radius: 20px;
+  padding: 36px;
+  box-shadow: 0 22px 50px rgba(92, 16, 39, 0.08);
+}
+
+.appointment-form-title {
+  margin: 0 0 6px;
+  font-family: var(--em-font-heading);
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: var(--em-deep-burgundy);
+}
+
+.appointment-form-intro {
+  margin: 0 0 24px;
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: 300;
+  color: var(--em-muted);
+}
+
+.appointment-form {
+  display: grid;
+  gap: 16px;
+}
+
+.appointment-field {
+  display: grid;
+  gap: 7px;
+  min-width: 0;
+}
+
+.appointment-field-label {
+  display: block;
+  font-size: 11px;
+  line-height: 1.3;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--em-burgundy);
+}
+
+.appointment-field input,
+.appointment-field select,
+.appointment-field textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 14px 16px;
+
+  border: 1px solid rgba(168, 18, 63, 0.2);
+  border-radius: 10px;
+
+  background: #fff9fa;
+  color: var(--em-dark);
+
+  font-family: var(--em-font-body);
+  font-size: 15px;
+  font-weight: 300;
+
+  outline: none;
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.appointment-field input::placeholder,
+.appointment-field textarea::placeholder {
+  color: #b58b93;
+  opacity: 1;
+}
+
+.appointment-field input:focus,
+.appointment-field select:focus,
+.appointment-field textarea:focus {
+  border-color: var(--em-burgundy);
+  box-shadow: 0 0 0 3px rgba(168, 18, 63, 0.07);
+  background: var(--em-white);
+}
+
+.appointment-field select {
+  appearance: auto;
+  cursor: pointer;
+}
+
+.appointment-field textarea {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.6;
+}
+
+.appointment-field-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.appointment-submit {
+  width: 100%;
+  margin-top: 6px;
+
+  border: 0;
+  border-radius: 999px;
+
+  padding: 17px 28px;
+
+  background: var(--em-burgundy);
+  color: var(--em-bg);
+
+  font-family: var(--em-font-body);
+  font-size: 12.5px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.appointment-submit:hover {
+  background: var(--em-deep-burgundy);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(92, 16, 39, 0.16);
+}
+
+.appointment-submit:active {
+  transform: translateY(0);
+}
+
+.appointment-form-notice {
+  margin: 4px 0 0;
+  font-size: 12px;
+  line-height: 1.6;
+  font-weight: 300;
+  color: #a98089;
+}
+
+@media (max-width: 575.98px) {
+  .appointment-form-card {
+    padding: 26px 20px;
+    border-radius: 16px;
+  }
+
+  .appointment-form-title {
+    font-size: 26px;
+  }
+
+  .appointment-field-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .appointment-field input,
+  .appointment-field select,
+  .appointment-field textarea {
+    font-size: 15px;
+  }
+}

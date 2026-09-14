@@ -1,0 +1,207 @@
+.treatments-section {
+  background: #fcf3f4;
+  padding: 110px 28px;
+}
+
+.treatments-container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.treatments-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.treatments-heading-content {
+  min-width: 0;
+}
+
+.treatments-eyebrow {
+  margin: 0 0 18px;
+
+  font-family: var(--em-font-body);
+  font-size: 11.5px;
+  font-weight: 400;
+  letter-spacing: 0.36em;
+  line-height: 1.4;
+  text-transform: uppercase;
+
+  color: #c4707f;
+}
+
+.treatments-title {
+  margin: 0;
+
+  font-family: var(--em-font-heading);
+  font-size: clamp(32px, 3.8vw, 52px);
+  font-weight: 300;
+  line-height: 1.1;
+
+  color: #5c1027;
+}
+
+.treatments-title em {
+  font-style: italic;
+  color: #a8123f;
+}
+
+.treatments-price-link {
+  padding-bottom: 6px;
+
+  border-bottom: 1px solid rgba(168, 18, 63, 0.4);
+
+  font-family: var(--em-font-body);
+  font-size: 12.5px;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  line-height: 1.3;
+  text-transform: uppercase;
+
+  color: #a8123f;
+
+  transition:
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.treatments-price-link:hover {
+  color: #5c1027;
+  border-bottom-color: #5c1027;
+}
+
+.treatments-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 26px;
+
+  margin-top: 52px;
+}
+
+.treatment-card {
+  display: block;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(168, 18, 63, 0.1);
+  border-radius: 18px;
+
+  color: #43242b;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.treatment-card:hover {
+  color: #43242b;
+}
+
+.treatment-card-image {
+  aspect-ratio: 4 / 5;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 6px;
+
+  background: repeating-linear-gradient(
+    135deg,
+    #f7d7db 0 12px,
+    #f1c6cd 12px 24px
+  );
+}
+.treatment-card-image {
+  position: relative;
+  overflow: hidden;}
+
+.treatment-card-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+.treatment-card-label {
+  padding: 8px 14px;
+
+  border-radius: 999px;
+
+  background: rgba(252, 243, 244, 0.92);
+
+  font-family: "Jost", monospace;
+  font-size: 10.5px;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  line-height: 1.3;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #a8123f;
+}
+
+.treatment-card-content {
+  padding: 26px 24px 30px;
+}
+
+.treatment-card-content h3 {
+  margin: 0;
+
+  font-family: var(--em-font-heading);
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 1.15;
+
+  color: #5c1027;
+}
+
+.treatment-card-content p {
+  margin: 10px 0 0;
+
+  font-family: var(--em-font-body);
+  font-size: 14.5px;
+  font-weight: 300;
+  line-height: 1.7;
+
+  color: #7a4b54;
+}
+
+.treatment-card-price {
+  margin-top: 20px;
+
+  font-family: var(--em-font-body);
+  font-size: 11.5px;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  line-height: 1.3;
+  text-transform: uppercase;
+
+  color: #a8123f;
+}
+
+@media (max-width: 768px) {
+  .treatments-section {
+    padding: 80px 24px;
+  }
+
+  .treatments-grid {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .treatments-section {
+    padding: 70px 20px;
+  }
+
+  .treatments-grid {
+    grid-template-columns: 1fr;
+  }
+}

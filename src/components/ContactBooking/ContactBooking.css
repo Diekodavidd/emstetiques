@@ -1,0 +1,112 @@
+.contact-booking {
+  width: 100%;
+  background: var(--em-bg);
+  padding: 90px 28px;
+}
+
+.contact-booking-container {
+  width: min(100%, var(--em-container));
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 56px;
+  align-items: start;
+}
+
+.contact-booking-info {
+  min-width: 0;
+}
+
+.contact-booking-title {
+  margin: 0 0 26px;
+
+  font-family: var(--em-font-heading);
+  font-size: clamp(28px, 3.2vw, 42px);
+  line-height: 1.1;
+  font-weight: 300;
+
+  color: var(--em-deep-burgundy);
+}
+
+.contact-booking-title em {
+  font-style: italic;
+  color: var(--em-burgundy);
+}
+
+.contact-details {
+  display: grid;
+  gap: 18px;
+  margin-top: 40px;
+
+  font-size: 15px;
+}
+
+.contact-detail {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+}
+
+.contact-detail-label {
+  flex: 0 0 86px;
+
+  font-size: 11px;
+  line-height: 1.3;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+
+  color: var(--em-soft);
+}
+
+.contact-detail-value {
+  color: var(--em-dark);
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+@media (max-width: 991.98px) {
+  .contact-booking-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .contact-booking {
+    padding: 70px 22px;
+  }
+
+  .contact-booking-title {
+    margin-bottom: 22px;
+  }
+
+  .contact-details {
+    margin-top: 32px;
+    gap: 16px;
+  }
+
+  .contact-detail {
+    gap: 12px;
+  }
+
+  .contact-detail-label {
+    flex-basis: 78px;
+    font-size: 10px;
+  }
+
+  .contact-detail-value {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .contact-detail {
+    display: grid;
+    gap: 5px;
+  }
+
+  .contact-detail-label {
+    flex-basis: auto;
+  }
+}

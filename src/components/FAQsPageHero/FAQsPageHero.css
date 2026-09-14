@@ -1,0 +1,97 @@
+.faqs-page-hero {
+  background: linear-gradient(
+    160deg,
+    #fbe4e7 0%,
+    #f6cbd1 55%,
+    #efb3bc 100%
+  );
+  padding: 76px 28px 84px;
+}
+
+.faqs-page-hero-container {
+  max-width: var(--em-container);
+  margin: 0 auto;
+}
+
+.faqs-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-family: var(--em-font-body);
+  font-size: 11.5px;
+  font-weight: 300;
+  letter-spacing: 0.22em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.faqs-breadcrumb a {
+  color: #8e1035;
+  transition: color 0.25s ease;
+}
+
+.faqs-breadcrumb a:hover {
+  color: var(--em-burgundy);
+}
+
+.faqs-breadcrumb span {
+  color: var(--em-soft);
+}
+
+.faqs-page-title {
+  margin: 22px 0 0;
+
+  font-family: var(--em-font-heading);
+  font-size: clamp(40px, 5.6vw, 76px);
+  font-weight: 300;
+  line-height: 1;
+  color: var(--em-deep-burgundy);
+}
+
+.faqs-page-title em {
+  font-style: italic;
+  color: var(--em-burgundy);
+}
+
+.faqs-page-hero-container .brand-curve {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.faqs-page-description {
+  max-width: 620px;
+  margin: 20px 0 0;
+
+  font-family: var(--em-font-body);
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.75;
+  color: var(--em-text);
+  text-wrap: pretty;
+}
+
+@media (max-width: 767.98px) {
+  .faqs-page-hero {
+    padding: 64px 24px 70px;
+  }
+
+  .faqs-page-description {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .faqs-page-hero {
+    padding: 56px 20px 62px;
+  }
+
+  .faqs-page-title {
+    font-size: clamp(40px, 12vw, 58px);
+  }
+
+  .faqs-page-description {
+    font-size: 15.5px;
+    line-height: 1.7;
+  }
+}

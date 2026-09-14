@@ -1,0 +1,148 @@
+.treatment-cta {
+  background: var(--em-deep-burgundy);
+  color: var(--em-light-pink);
+
+  padding: 92px 28px;
+
+  text-align: center;
+}
+
+.treatment-cta-container {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* Heading */
+
+.treatment-cta-title {
+  margin: 0;
+
+  font-family: var(--em-font-heading);
+  font-size: clamp(30px, 3.6vw, 48px);
+  font-weight: 300;
+  line-height: 1.12;
+
+  color: var(--em-light-pink);
+}
+
+.treatment-cta-title em {
+  font-style: italic;
+  color: var(--em-pink);
+}
+
+/* Description */
+
+.treatment-cta-description {
+  margin: 20px 0 34px;
+
+  font-family: var(--em-font-body);
+  font-size: 16.5px;
+  font-weight: 300;
+  line-height: 1.8;
+
+  color: #e3a2ab;
+}
+
+/* Buttons */
+
+.treatment-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+}
+
+.treatment-cta-primary,
+.treatment-cta-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 17px 32px;
+
+  border-radius: 999px;
+
+  font-family: var(--em-font-body);
+  font-size: 12.5px;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  line-height: 1.4;
+  text-transform: uppercase;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+/* Primary */
+
+.treatment-cta-primary {
+  background: var(--em-pink);
+  color: var(--em-deep-burgundy);
+}
+
+.treatment-cta-primary:hover {
+  background: var(--em-bg);
+  color: var(--em-deep-burgundy);
+
+  transform: translateY(-2px);
+}
+
+/* Secondary */
+
+.treatment-cta-secondary {
+  border: 1px solid rgba(246, 201, 206, 0.5);
+
+  background: transparent;
+  color: var(--em-light-pink);
+}
+
+.treatment-cta-secondary:hover {
+  background: rgba(246, 201, 206, 0.14);
+  color: var(--em-light-pink);
+
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+
+@media (max-width: 767.98px) {
+  .treatment-cta {
+    padding: 80px 24px;
+  }
+
+  .treatment-cta-description {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+}
+
+@media (max-width: 480px) {
+  .treatment-cta {
+    padding: 70px 20px;
+  }
+
+  .treatment-cta-title {
+    font-size: clamp(30px, 9vw, 40px);
+  }
+
+  .treatment-cta-description {
+    font-size: 15px;
+  }
+
+  .treatment-cta-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .treatment-cta-primary,
+  .treatment-cta-secondary {
+    width: 100%;
+    padding: 15px 24px;
+
+    font-size: 11.5px;
+    letter-spacing: 0.15em;
+  }
+}

@@ -1,0 +1,52 @@
+.contact-map {
+  width: 100%;
+  margin-top: 34px;
+  aspect-ratio: 16 / 9;
+  border-radius: 16px;
+  overflow: hidden;
+
+  background: repeating-linear-gradient(
+    135deg,
+    #f1dde0 0 12px,
+    #ebd2d6 12px 24px
+  );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-map-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 8px 14px;
+  border-radius: 999px;
+
+  background: rgba(252, 243, 244, 0.92);
+
+  font-family: var(--em-font-body);
+  font-size: 10.5px;
+  line-height: 1.2;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+
+  color: #8e1035;
+  text-align: center;
+}
+
+@media (max-width: 767.98px) {
+  .contact-map {
+    margin-top: 30px;
+    border-radius: 14px;
+  }
+
+  .contact-map-label {
+    max-width: calc(100% - 32px);
+    padding: 8px 12px;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+  }
+}

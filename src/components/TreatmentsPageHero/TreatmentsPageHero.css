@@ -1,0 +1,150 @@
+.treatments-page-hero {
+  background: linear-gradient(
+    160deg,
+    #fbe4e7 0%,
+    #f6cbd1 55%,
+    #efb3bc 100%
+  );
+  padding: 76px 28px 84px;
+}
+
+.treatments-page-hero-container {
+  max-width: var(--em-container);
+  margin: 0 auto;
+}
+
+/* Breadcrumb */
+
+.treatments-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-family: var(--em-font-body);
+  font-size: 11.5px;
+  font-weight: 300;
+  letter-spacing: 0.22em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.treatments-breadcrumb a {
+  color: #8e1035;
+  transition: color 0.25s ease;
+}
+
+.treatments-breadcrumb a:hover {
+  color: var(--em-burgundy);
+}
+
+.treatments-breadcrumb span {
+  color: #c4707f;
+}
+
+/* Heading */
+
+.treatments-page-title {
+  margin: 22px 0 0;
+
+  font-family: var(--em-font-heading);
+  font-size: clamp(40px, 5.6vw, 76px);
+  font-weight: 300;
+  line-height: 1;
+  color: var(--em-deep-burgundy);
+}
+
+.treatments-page-title em {
+  font-style: italic;
+  color: var(--em-burgundy);
+}
+
+/* Description */
+
+.treatments-page-description {
+  max-width: 620px;
+  margin: 22px 0 0;
+
+  font-family: var(--em-font-body);
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.75;
+  color: var(--em-text);
+}
+
+/* Treatment links */
+
+.treatments-page-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 34px;
+}
+
+.treatments-page-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 11px 20px;
+
+  border: 1px solid rgba(92, 16, 39, 0.3);
+  border-radius: 999px;
+
+  font-family: var(--em-font-body);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  line-height: 1.4;
+  text-transform: uppercase;
+
+  color: var(--em-deep-burgundy);
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.treatments-page-link:hover {
+  background: rgba(255, 255, 255, 0.6);
+  color: var(--em-deep-burgundy);
+  border-color: rgba(92, 16, 39, 0.3);
+  transform: translateY(-1px);
+}
+
+/* Responsive */
+
+@media (max-width: 767.98px) {
+  .treatments-page-hero {
+    padding: 64px 24px 70px;
+  }
+
+  .treatments-page-description {
+    font-size: 16px;
+  }
+
+  .treatments-page-links {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .treatments-page-hero {
+    padding: 56px 20px 62px;
+  }
+
+  .treatments-page-title {
+    font-size: clamp(40px, 12vw, 58px);
+  }
+
+  .treatments-page-description {
+    font-size: 15.5px;
+    line-height: 1.7;
+  }
+
+  .treatments-page-link {
+    padding: 10px 16px;
+    font-size: 11px;
+  }
+}

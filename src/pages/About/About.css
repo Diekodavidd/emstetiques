@@ -1,0 +1,10 @@
+.about-page {
+  min-height: 100vh;
+  background: var(--em-bg);
+  color: var(--em-dark);
+  /* overflow-x: hidden; */
+}
+
+.about-page section {
+  width: 100%;
+}
