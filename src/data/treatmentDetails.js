@@ -189,7 +189,7 @@ const treatmentDetails = [
         text: "Visible within 7-14 days, lasting up to 3-4 months.",
       },
     ],
-    buttonText: "Book your Botox® Consultation",
+    buttonText: "Book Botox® Consultation",
         avatar:"https://res.cloudinary.com/zy7u4nqi/image/upload/v1789400538/dddd_mioqh8.jpg"
 
   },
