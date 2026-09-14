@@ -67,15 +67,15 @@ function BrandCurve({ className = "" }) {
         >
           <defs>
             <clipPath id={clipId}>
-              <rect x="0" y="0" width="274" height="75" />
+<rect x="0" y="0" width="267" height="75" />
             </clipPath>
           </defs>
 
-          <motion.path
-            className="brand-curve-main"
-d="M8 10
-             C58 27 112 38 170 39
-             C221 40 263 31 298 1"            clipPath={`url(#${clipId})`}
+         <motion.path
+  className="brand-curve-main"
+  d="M8 10
+      C58 27 112 38 170 39
+      C208 40 240 35 267 21"           clipPath={`url(#${clipId})`}
             initial={{ pathLength: 0, opacity: 0 }}
             whileInView={{ pathLength: 1, opacity: 1 }}
             viewport={{
