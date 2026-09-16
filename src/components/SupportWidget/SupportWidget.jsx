@@ -99,7 +99,7 @@ function SupportWidget() {
       name: "",
       email: "",
       phone: "",
-      message: "I want to know more",
+      message: "",
     });
   };
 
