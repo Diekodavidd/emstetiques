@@ -68,7 +68,7 @@ function TreatmentSection({
             ))}
           </div>
 
-          <a href="https://www.fresha.com/a/fx-aesthetics-uk-london-22-new-broadway-asqy9zb4/booking?menu=true&pId=2542521&cartId=dda8eb53-bf0d-4765-b171-2dd62170be93" className="treatment-book-button">
+          <a href="" className="treatment-book-button">
             {treatment.buttonText}
           </a>
         </motion.div>

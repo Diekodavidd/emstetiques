@@ -1,7 +1,11 @@
 import { motion } from "framer-motion";
 import "./Footer.css";
-import { Link, NavLink } from "react-router-dom";
-
+import { NavLink } from "react-router-dom";
+import {
+  FaInstagram,
+  FaTiktok,
+  FaWhatsapp,
+} from "react-icons/fa";
 
 function Footer() {
   return (
@@ -14,8 +18,10 @@ function Footer() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <img 
-          src="https://res.cloudinary.com/zy7u4nqi/image/upload/v1789407932/emstetiques-wordmark-tagline-light_upettj.png" alt="logo" />
+          <img
+            src="https://res.cloudinary.com/zy7u4nqi/image/upload/v1789407932/emstetiques-wordmark-tagline-light_upettj.png"
+            alt="Emstetiques"
+          />
 
           <p className="footer-description">
             Prescriber-led facial aesthetics with a focus on natural, balanced
@@ -28,7 +34,11 @@ function Footer() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.8, delay: 0.05, ease: "easeOut" }}
+          transition={{
+            duration: 0.8,
+            delay: 0.05,
+            ease: "easeOut",
+          }}
         >
           <h4>Important links</h4>
 
@@ -45,7 +55,11 @@ function Footer() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
+          transition={{
+            duration: 0.8,
+            delay: 0.1,
+            ease: "easeOut",
+          }}
         >
           <h4>Opening hours</h4>
 
@@ -61,16 +75,49 @@ function Footer() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
+          transition={{
+            duration: 0.8,
+            delay: 0.15,
+            ease: "easeOut",
+          }}
         >
           <h4>Contact</h4>
 
           <div className="footer-links">
-            <a href="mailto:hello@emstetiques.co.uk">
-              hello@emstetiques.co.uk
+            <a href="mailto:emstetiques@gmail.com">
+              emstetiques@gmail.com
             </a>
-            <NavLink to="/contact">Instagram</NavLink>
-            <NavLink to="/contact">WhatsApp</NavLink>
+
+            {/* Instagram */}
+            <a
+              href="https://www.instagram.com/emstetiques?stkn=czhldDAzb2wza252"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-social-link"
+            >
+              <FaInstagram />
+              Instagram
+            </a>
+
+            {/* TikTok */}
+            <a
+              href=""
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-social-link"
+            >
+              <FaTiktok />
+              TikTok
+            </a>
+
+            {/* WhatsApp → Contact page for now */}
+            <NavLink
+              to="/contact"
+              className="footer-social-link"
+            >
+              <FaWhatsapp />
+              WhatsApp
+            </NavLink>
           </div>
         </motion.div>
       </div>

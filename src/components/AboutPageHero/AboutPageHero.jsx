@@ -41,7 +41,7 @@ function AboutPageHero() {
           <div className="about-page-portrait-placeholder">
             {/* https://res.cloudinary.com/zy7u4nqi/image/upload/v1789398860/heroo_s56vkq.png */}
             <img
-  src="https://res.cloudinary.com/zy7u4nqi/image/upload/v1789398860/heroo_s56vkq.png"
+  src="https://res.cloudinary.com/zy7u4nqi/image/upload/v1789650114/ChatGPT_Image_Sep_17_2026_02_01_06_PM_cnmwyp.png"
   alt="Emstetiques practitioner holding an aesthetic treatment syringe"
 />
           </div>

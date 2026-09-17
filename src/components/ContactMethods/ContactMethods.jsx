@@ -6,17 +6,17 @@ const contactMethods = [
   {
     title: "Book online",
     description: "Live availability, instant confirmation",
-    href: "#book",
+    href: "",
   },
   {
     title: "WhatsApp",
     description: "Quick questions, usually answered same day",
-    href: "#book",
+    href: "",
   },
   {
     title: "Email",
-    description: "hello@emstetiques.co.uk",
-    href: "#book",
+    description: "emstetiques@gmail.com",
+    href: "",
   },
 ];
 
